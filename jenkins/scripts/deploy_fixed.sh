@@ -5,6 +5,7 @@ docker run -d -p 80:80 --name my-apache-php-app -v /Users/chewtimothy/Downloads/
 sleep 1
 set -x
 
+laptop_ip="192.168.68.106"
 echo 'Now...'
-echo 'Visit http://host.docker.internal to see your PHP application in action.'
+echo 'Visit http://$laptop_ip to see your PHP application in action.'
 
