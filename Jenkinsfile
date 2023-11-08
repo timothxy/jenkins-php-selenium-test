@@ -9,7 +9,7 @@ pipeline {
 						sh "chmod +x -R ${env.WORKSPACE}"
 						sh './jenkins/scripts/deploy_fixed.sh'
 						input message: 'Finished using the web site? (Click "Proceed" to continue)'
-						sh './jenkins/scripts/kill.sh'
+						sh './jenkins/scripts/kill_fixed.sh'
 					}
 				}
 				stage('Headless Browser Test') {
