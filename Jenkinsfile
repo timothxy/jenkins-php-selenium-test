@@ -7,7 +7,7 @@ pipeline {
 					agent any
 					steps {
 						sh "chmod +x -R ${env.WORKSPACE}"
-						sh './jenkins/scripts/deploy.sh'
+						sh './jenkins/scripts/deploy_fixed.sh'
 						input message: 'Finished using the web site? (Click "Proceed" to continue)'
 						sh './jenkins/scripts/kill.sh'
 					}
